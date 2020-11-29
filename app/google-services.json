@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "894375933721",
+    "firebase_url": "https://comp3330-assistant-b413b.firebaseio.com",
+    "project_id": "comp3330-assistant-b413b",
+    "storage_bucket": "comp3330-assistant-b413b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894375933721:android:8bc16ddbb41ea2e77af788",
+        "android_client_info": {
+          "package_name": "com.example.comp3330assistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894375933721-k5sbndp02pgu7tbdbp6orcrk5bgf472r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.comp3330assistant",
+            "certificate_hash": "a1a8b4a5be44830f2c31f5123b9762f5e9beb5be"
+          }
+        },
+        {
+          "client_id": "894375933721-2sof1ik7qg05vo0rutj9afvl8fbirlmi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLx9MZrcgVXdl9wEKpiSyOw43rdW5ALIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894375933721-2sof1ik7qg05vo0rutj9afvl8fbirlmi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
