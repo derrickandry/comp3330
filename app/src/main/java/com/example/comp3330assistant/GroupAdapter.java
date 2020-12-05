@@ -57,7 +57,7 @@ public class GroupAdapter extends ArrayAdapter<Group> implements View.OnClickLis
             String headMessage = groupItem.getGroupNumber() + " - " + groupItem.getAppName();
             head.setText(headMessage);
 
-            String subtitleMessage = "By: " + groupItem.getAllMembers();
+            String subtitleMessage = "By: " + groupItem.AllMembers();
             subtitle.setText(subtitleMessage);
 
             description.setText(groupItem.getDescription());

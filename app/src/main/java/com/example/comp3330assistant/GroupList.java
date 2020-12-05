@@ -3,9 +3,12 @@ package com.example.comp3330assistant;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.renderscript.Sampler;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -31,7 +34,21 @@ public class GroupList extends AppCompatActivity {
         final ArrayList<Group> Groups = new ArrayList<>();
         final GroupAdapter groupAdapter = new GroupAdapter(Groups, this, R.layout.group_row);
         listView.setAdapter(groupAdapter);
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                final Intent intent = new Intent(GroupList.this, ProjectShowcase.class);
+                intent.putExtra("apk", Groups.get(position).getAPK());
+                intent.putExtra("videoLink", Groups.get(position).getVideo());
+                intent.putExtra("members", Groups.get(position).AllMembers());
+                intent.putExtra("description", Groups.get(position).getDescription());
+                intent.putExtra("logo", Groups.get(position).getLogo());
+                intent.putExtra("appName", Groups.get(position).getAppName());
+                intent.putExtra("source", Groups.get(position).getSource());
+                intent.putExtra("details", Groups.get(position).getDetails());
+                startActivity(intent);
+            }
+        });
 
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Groups");
@@ -43,6 +60,7 @@ public class GroupList extends AppCompatActivity {
                     Group group = ds.getValue(Group.class);
                     group.setGroupNumber(ds.getKey());
                     Groups.add(group);
+                    Log.d("asdf", group.getAppName());
                 }
                 groupAdapter.notifyDataSetChanged();
             }

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProjectShowcase">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#374281"
+                android:fillViewport="true">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/comp3330logo" />
+
+                <TextView
+                    android:id="@+id/appName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/logo"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Angry Birds"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textColor="#FFFFFF"
+                    ></TextView>
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/appName"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif"
+                    android:text="there are so many angry birds."
+                    android:textAlignment="center"
+                    android:textSize="17sp"
+                    android:textStyle="italic"
+                    android:textColor="#FFFFFF"
+                    ></TextView>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Demo"
+                android:textSize="25sp"
+                android:textColor="#374281"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                ></TextView>
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:autoPlay="false"
+                app:videoId=""
+                tools:layout_editor_absoluteX="-16dp" />
+            <TextView
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Details"
+                android:textSize="25sp"
+                android:textColor="#374281"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                ></TextView>
+            <TextView
+                android:id="@+id/detailsContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The survival of the Angry Birds is at stake. Dish out revenge on the greedy pigs who stole their eggs. Use the unique powers of each bird to destroy the pigs’ defenses. Angry Birds features challenging physics-based gameplay and hours of replay value. Each level requires logic, skill and force to solve.  FEATURES: – Enjoy fun and satisfying slingshot gameplay. – Play all 15 original Angry Birds episodes – over 680 levels! – Compete against other players in the Mighty League. – Boost your birds’ destructive strength with powerups. – Download and play for free! – Play offline!   ------ HAVING TROUBLE? Head over to https://support.rovio.com where you can browse FAQs or submit a request to our support flock! -----  Terms of Use: http://www.rovio.com/eula Privacy Policy: http://www.rovio.com/privacy  This application may require internet connectivity and subsequent data transfer charges may apply.  This game may include: - Direct links to social networking websites that are intended for an audience over the age of 13. - Direct links to the internet that can take players away from the game with the potential to browse any web page. - Advertising of Rovio products and also products from select partners. - The option to make in-app purchases. The bill payer should always be consulted beforehand."
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="15dp"
+
+                ></TextView>
+            <TextView
+                android:id="@+id/members"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Created by"
+                android:textSize="25sp"
+                android:textColor="#374281"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                ></TextView>
+            <TextView
+                android:id="@+id/membersContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Derrick, Tom, Jane"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="15dp"
+                ></TextView>
+            <TextView
+                android:id="@+id/source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Source"
+                android:textSize="25sp"
+                android:textColor="#374281"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                ></TextView>
+            <TextView
+                android:id="@+id/sourceContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="https://github.com/imanolarrieta/angrybirds"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="15dp"
+                android:autoLink="web"
+                ></TextView>
+            <TextView
+                android:id="@+id/test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Try it now!"
+                android:textSize="25sp"
+                android:textColor="#374281"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                ></TextView>
+            <Button
+                android:id="@+id/download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="56dp"
+
+                android:text="Download"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

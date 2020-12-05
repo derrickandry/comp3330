@@ -1,24 +1,48 @@
 package com.example.comp3330assistant;
 
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
+
 
 
 public class Group {
-    String APK, AppName, Description, Logo, Video;
-    HashMap<String, String> Members;
+    private String APK;
+    private String AppName;
+    private String Description;
+    private String Logo;
+    private String Video;
+    private String Details;
+    private String Source;
+    private Map<String, String> Members;
     private String groupNumber;
 
     public Group(){
 
     }
-    public Group(String APK, String AppName, String Description, String Logo, String Video, HashMap<String, String> Members){
+    public Group(String APK, String AppName, String Description, String Logo, String Video, String Details, String Source, Map<String, String> Members){
         this.APK = APK;
         this.AppName = AppName;
         this.Description = Description;
         this.Logo = Logo;
         this.Video = Video;
         this.Members = Members;
+        this.Details = Details;
+        this.Source = Source;
+    }
+    public Group(String APK, String AppName, String Description, String Logo, String Video, String Details, String Source, String Members){
+        this.APK = APK;
+        this.AppName = AppName;
+        this.Description = Description;
+        this.Logo = Logo;
+        this.Video = Video;
+        this.Details = Details;
+        this.Source = Source;
+        String[] members = Members.split(",");
+        Map<String, String> memberList = new HashMap<>();
+        for(int i = 1; i < members.length+1; i++){
+            memberList.put("m"+i, members[i-1]);
+        }
+        this.Members = memberList;
     }
 
     public String getAPK() {
@@ -61,11 +85,11 @@ public class Group {
         this.Video = Video;
     }
 
-    public HashMap<String, String> getMembers() {
+    public Map<String, String> getMembers() {
         return Members;
     }
 
-    public void setMembers(HashMap<String, String> Members) {
+    public void setMembers(Map<String, String> Members) {
         this.Members = Members;
     }
     public void setGroupNumber(String groupNumber){
@@ -74,7 +98,7 @@ public class Group {
     public String getGroupNumber(){
         return this.groupNumber;
     }
-    public String getAllMembers(){
+    public String AllMembers(){
         String everyone = "";
         for(String member: Members.values()){
             everyone += member +", ";
@@ -82,4 +106,20 @@ public class Group {
 
         return everyone.substring(0, everyone.length()-2);
     }
+    public String getDetails() {
+        return Details;
+    }
+
+    public void setDetails(String Details) {
+        this.Details = Details;
+    }
+    public String getSource() {
+        return Source;
+    }
+
+    public void setSource(String source) {
+        Source = source;
+    }
+
+
 }
